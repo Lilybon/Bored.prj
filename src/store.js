@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    apiDomain: 'http://www.boredapi.com/',
+    apiDomain: 'https://www.boredapi.com/',
     apiMethod: 'api/activity/',
     currentMiniTestActivity: {},
     isFirstTimeDoMiniTest: true,
