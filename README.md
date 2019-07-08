@@ -1,4 +1,4 @@
-# bored
+# Bored.prj
 Just a casual website for random activities to kill time.
 There are two main functions:
 1. /mini-test - a beetalk-like mini test for understanding your preference for activities.
@@ -15,9 +15,6 @@ and you can also send a feedback or issue to me on the about page.
 
 ## URL 
 [Bored.prj](https://lilybon.github.io/Bored.prj/)
-
-/mini-test
-/find-acts
 
 ## Project setup
 ```
