@@ -147,7 +147,7 @@ export default {
         height: 360px;
     }
 }
-@media (min-width: 800px) {
+@media (min-width: 960px) {
     .test-card {
         margin-left: -150px;
         width: 300px;
@@ -201,7 +201,7 @@ export default {
         font-size: 1.2rem;
     }
 }
-@media (min-width: 800px) {
+@media (min-width: 960px) {
     .test-card-center__title {
         font-size: 1.6rem;
     }
@@ -218,7 +218,7 @@ export default {
         font-size:0.75rem;
     }
 }
-@media (min-width: 800px) {
+@media (min-width: 960px) {
     .test-card-corner {
         font-size: 1rem;
     }

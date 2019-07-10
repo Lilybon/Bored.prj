@@ -10,9 +10,9 @@ export default new Vuex.Store({
     apiMethod: 'api/activity/',
     currentMiniTestActivity: {},
     isFirstTimeDoMiniTest: true,
-    miniTestNum: 10,
+    miniTestNum: 25,
     miniTestActivitiesCollection: [],
-    findActNum: 8,
+    findActNum: 10,
     findActActivitiesCollection: [],
     categories: [
       {

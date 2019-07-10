@@ -1,7 +1,7 @@
 <template>
     <div class="test-info-board">
-        <v-layout class="test-info-board__container" row wrap justify-center>
-            <v-flex class="test-info-board__progress" xs12>
+        <v-layout class="test-info-board__container" row wrap justify-center align-center>
+            <v-flex class="test-info-board__progress" xs12 md4>
                 <v-progress-circular
                     :rotate="-90"
                     :size="100"
@@ -12,10 +12,10 @@
                     {{ currentTestCount - 1 }} / {{ totalTestCount }}
                 </v-progress-circular>
                 </v-flex>
-            <v-flex class="test-info-board__choice test-info-board__choice--dislike" xs6>
+            <v-flex class="test-info-board__choice test-info-board__choice--dislike" xs6 md4>
                 <v-icon color="#D81503">thumb_down_alt</v-icon>{{ dislikeCount }}
             </v-flex>
-            <v-flex class="test-info-board__choice test-info-board__choice--like" xs6>
+            <v-flex class="test-info-board__choice test-info-board__choice--like" xs6 md4>
                 <v-icon color="#0AB97F">thumb_up_alt</v-icon>{{ likeCount }}
             </v-flex>
         </v-layout>
@@ -57,11 +57,24 @@ export default {
         height: 200px;
    } 
 }
+@media (min-width: 960px) {
+   .test-info-board {
+        top: 60vh;   
+        margin-left: -200px;
+        width: 400px;
+        height: 150px;
+   } 
+}
 .test-info-board__container {
     height: 100%;
 }
 .test-info-board__progress {
     font-size: 15px;
+}
+@media (min-width: 960px) {
+   .test-info-board__progress {
+        order: 2;
+   } 
 }
 .test-info-board__choice {
         font-size: 15px;
@@ -77,8 +90,18 @@ export default {
 .test-info-board__choice--like {
     color: #0AB97F;
 }
+@media (min-width: 960px) {
+   .test-info-board__choice--like {
+        order: 3;
+   } 
+}
 .test-info-board__choice--dislike {
     color: #D81503;
+}
+@media (min-width: 960px) {
+   .test-info-board__choice--dislike {
+        order: 1;
+   } 
 }
 </style>
 
