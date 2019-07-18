@@ -7,11 +7,11 @@
         <v-card dark>
             <v-card-text class="test-dialog__content">
                 <p class="test-dialog__content--important font-weight-medium">測驗說明</p>
-                <p>依照直覺將活動卡片作喜歡討厭的歸類。注意活動的難易和開銷僅是心理的相對數值。</p>
+                <p class="font-weight-light">依照直覺將活動卡片作喜歡討厭的歸類。注意活動的難易和開銷僅是心理的相對數值。</p>
                 <br/>
                 <p class="test-dialog__content--important font-weight-medium">介面說明</p>
-                <p>選擇按鈕 - 拖曳卡片至<a class="green white--text">喜歡</a>或<a class="red white--text">討厭</a>的圈圈或直接點擊都能做出選擇。</p>
-                <p>進度條 - 畫面中央有進度條供您操考做題進度。</p>
+                <p class="font-weight-light">選擇按鈕 - 拖曳卡片至<a class="green white--text">喜歡</a>或<a class="red white--text">討厭</a>的圈圈或直接點擊都能做出選擇。</p>
+                <p class="font-weight-light">進度條 - 畫面中央有進度條供您操考做題進度。</p>
                 
             </v-card-text>
             <v-divider></v-divider>

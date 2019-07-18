@@ -1,5 +1,6 @@
 <template>
-    <v-layout class="panel" row wrap pa-2>
+    <v-container>
+        <v-layout class="panel" row wrap pa-2>
             <v-flex pa-2 xs12>
                 <h1>建議活動</h1>
                 <p v-if="listFound" class="panel-content__description panel-content--slide-from-right">
@@ -31,7 +32,7 @@
             <v-flex v-if="progress" class="panel__progress" pa-2 xs12 text-xs-center>
                 <v-progress-circular
                     indeterminate
-                    :color="color"
+                    color="#7c79a2"
                     :size="70"
                     :width="7"
                 ></v-progress-circular>
@@ -52,12 +53,13 @@
                 :activity="activity"
             />
             <v-flex px-4 xs12 sm6 md4>
-                <v-btn block large :color="color" to="find-act">再玩一次</v-btn>
+                <v-btn class="white--text" block large :color="color" to="find-act">再玩一次</v-btn>
             </v-flex>
             <v-flex px-4 xs12 sm6 md4>
-                <v-btn block large :color="color" to="/">回到主頁</v-btn>
+                <v-btn class="white--text" block large :color="color" to="/">回到主頁</v-btn>
             </v-flex>
         </v-layout>
+    </v-container>
 </template>
 
 <script>

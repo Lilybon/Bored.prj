@@ -56,7 +56,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .act-card {
     position: relative;
     align-items: stretch;
@@ -67,6 +67,19 @@ export default {
     border-radius: 10px 0 0 10px;
     overflow: hidden;
     font-size: 8px;
+    &__property-group {
+        background-color: #FAFFED;
+    }
+    &__property {
+        padding: 2px 5px;
+        border-right: 1px solid #F3DABB;
+    }
+    &__name {
+        height: 100%;
+        text-align: left;
+        word-break: break-all;
+        background-color: #FAFFED;
+    }
 }
 @media (min-width: 600px) {
     .act-card {
@@ -82,23 +95,10 @@ export default {
         font-size: 16px;
     }
 }
-.act-card__property-group {
-    background-color: #FAFFED;
-}
-.act-card__property {
-    padding: 2px 5px;
-    border-right: 1px solid #F3DABB;
-}
 @media (min-width: 600px) {
     .act-card__property {
         padding: 5px 35px;
     }
-}
-.act-card__name {
-    height: 100%;
-    text-align: left;
-    word-break: break-all;
-    background-color: #FAFFED;
 }
 @media (min-width: 600px) {
     .act-card__name {

@@ -84,6 +84,8 @@ export default {
     top: 70vh;
     height: 10vmax;
     width: 10vmax;
+    max-height: 150px;
+    max-width: 150px;
     border-radius: 5vmax;
     cursor: pointer;
     transform: scale(1,1);

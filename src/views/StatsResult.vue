@@ -1,5 +1,6 @@
 <template>
-    <v-layout class="panel" row wrap justify-space-around pa-2>
+    <v-container>
+        <v-layout class="panel" row wrap justify-space-around pa-2>
             <v-flex pa-2 xs12 class="panel-content">
                 <h1>統計結果</h1>
                 <p class="panel-content__description panel-content--slide-from-right">
@@ -30,6 +31,7 @@
                 <v-btn block large :color="color" to="/">回到主頁</v-btn>
             </v-flex>
         </v-layout>
+    </v-container>
 </template>
 
 <script>

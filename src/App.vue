@@ -1,8 +1,6 @@
 <template>
   <v-app>
-    <v-container>
-      <router-view></router-view>
-    </v-container>
+    <router-view></router-view>
     <Footer/>
   </v-app>
 </template>
@@ -38,11 +36,11 @@ export default {
 }
 @keyframes slidefomRightAndShow {
   0% {
-    left: 50px;
+    transform: translate(50px);
     opacity: 0;
   }
   75% {
-    left: 0;
+    transform: translate(0);
   }
   100% {
     opacity: 1;
@@ -64,11 +62,12 @@ export default {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1400px;
 }
 
 .panel {
   background-color: #fff6de;
+  border-radius: 1px solid#6d5c6d;
   border-radius: 5px;
   overflow: hidden;
 }

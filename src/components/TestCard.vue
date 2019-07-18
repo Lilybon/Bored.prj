@@ -192,9 +192,10 @@ export default {
     font-size: 40px;
 }
 .test-card-center__title {
-    padding: 0 18px;
+    padding: 5px 24px;
     text-align: left;
     font-size: 0.8rem;
+    font-weight: 300;
 }
 @media (min-width: 600px) {
     .test-card-center__title {
