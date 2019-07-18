@@ -12,23 +12,23 @@
         <div class="test-card-background"></div>
         <h2 class="test-card-center">
             <p class="test-card-center__mark">Q{{ count }}</p>
-            <p class="test-card-center__title">{{ activity.activity }}</p>
+            <p class="test-card-center__title grey--text text--darken-2">{{ activity.activity }}</p>
         </h2>
         <div class="test-card-corner test-card-corner__rt">
             <p class="test-card-corner__title"><v-icon small color="#9e1540">create</v-icon>難易</p>
-            <p>{{ activity.accessibility }} /1</p>
+            <p class="grey--text text--darken-2">{{ activity.accessibility }} /1</p>
         </div>
         <div class="test-card-corner test-card-corner__lt">
             <p class="test-card-corner__title"><v-icon small color="#9e1540">bookmarks</v-icon>類型</p>
-            <p>{{ activity.type | chinese-category-format }}</p>
+            <p class="grey--text text--darken-2">{{ activity.type | chinese-category-format }}</p>
         </div>
         <div class="test-card-corner test-card-corner__rb">
             <p class="test-card-corner__title"><v-icon small color="#9e1540">group</v-icon>人數</p>
-            <p>{{ activity.participants }}人</p>
+            <p class="grey--text text--darken-2">{{ activity.participants }}人</p>
         </div>
         <div class="test-card-corner test-card-corner__lb">
             <p class="test-card-corner__title"><v-icon small color="#9e1540">monetization_on</v-icon>開銷</p>
-            <p>{{ activity.price }} /1</p>
+            <p class="grey--text text--darken-2">{{ activity.price }} /1</p>
         </div>
     </div>
 </template>

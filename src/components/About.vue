@@ -107,9 +107,9 @@ export default {
       }
     }
 }
-.about .theme--light.v-input:not(.v-input--is-disabled) input, 
-.about .theme--light.v-input:not(.v-input--is-disabled) textarea {
-    color: #d29ebf;
+.about .theme--dark.v-input:not(.v-input--is-disabled) input, 
+.about .theme--dark.v-input:not(.v-input--is-disabled) textarea {
+    color: #d29ebf !important;
 }
 </style>
 

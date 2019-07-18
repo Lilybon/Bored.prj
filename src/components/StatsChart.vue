@@ -1,7 +1,7 @@
 <template>
     <v-flex xs12 pa-2 mb-2>
         <div class="stats-chart__container">
-            <svg :class="chartType" :width="width" :height="height"/>
+            <svg :class="chartType" :width="width" :height="height" color="black"/>
         </div>
     </v-flex>
     

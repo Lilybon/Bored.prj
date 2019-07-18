@@ -1,33 +1,30 @@
 <template>
-    <v-container>
+    <v-container class="find-act__container">
         <v-form>
-            <v-layout class="panel" row wrap justify-space-around pa-2>
+            <v-layout class="panel find-act__form" row wrap justify-space-around pa-4>
                 <v-flex pa-2 xs12 class="panel-content">
-                    <h1>尋找活動</h1>
-                    <p class="panel-content__description panel-content--slide-from-right">
-                        你真的無聊到爆了對吧？<br/>
-                        bored.prj正是為了像你這樣的客戶而生，<br/>
-                        透過篩選自訂義的條件來找到適合自己的活動清單吧，<br/>
-                        也許你根本懶得設定也可以考慮直接點選下方的按鈕繳交表單。
-                    </p>
-                    <p class="panel-content__description panel-content--slide-from-right">
-                        選項定義<br/>
-                        <b>活動類別</b> - 活動的性質<br/>
-                        <b>價格</b> - 活動需要的金費資出(非幣別單位，0為最便宜-1為最貴)<br/>
-                        <b>參與人數</b> - 活動涉及的必要人數(1-5人)<br/>
-                        <b>達成難易度</b> - 活動完成的難易度(0為最簡單-1為最困難)
+                    <v-img
+                        class="find-act__icon panel-content--show-4" 
+                        src="https://cdn0.iconfinder.com/data/icons/business-381/500/business-work_13-512.png" 
+                        max-width="300"
+                        alt="target"
+                    ></v-img>
+                    <h1 class="text-xs-center find-act__title">Find Activity</h1>
+                    <p class="panel-content__description panel-content--slide-from-right white--text">
+                        選擇你不討厭的活動吧，呃...懶得設定也可直接點下方按鈕繳交表單。
                     </p>
                 </v-flex>
-                <v-flex px-4 xs12 sm6 class="panel-content--show-1">
-                    <v-icon small>bookmarks</v-icon>活動類別
+                <v-flex px-4 pb-1 xs12 class="panel-content--show-1 white--text">
+                    <v-icon color="#a5a5bd" small left>bookmarks</v-icon>活動類別
                     <v-select
+                        dark
                         v-model="type"
                         :items="categories"
                         :color="color"
                     ></v-select>
                 </v-flex>
-                <v-flex px-4 xs12 sm6 class="panel-content--show-2">
-                    <v-icon small>monetization_on</v-icon>價格
+                <v-flex px-4 pb-1 xs12 class="panel-content--show-2 white--text">
+                    <v-icon color="#a5a5bd" small left>monetization_on</v-icon>價格(非幣別單位)
                     <v-range-slider
                         v-model="price"
                         :max="1"
@@ -38,8 +35,8 @@
                         :color="color"
                     ></v-range-slider>
                 </v-flex>
-                <v-flex px-4 xs12 sm6 class="panel-content--show-3">
-                    <v-icon small>group</v-icon>參與人數
+                <v-flex px-4 pb-1 xs12 class="panel-content--show-3 white--text">
+                    <v-icon color="#a5a5bd" small left>group</v-icon>參與人數
                     <v-slider
                         v-model="participants"
                         min="1"
@@ -50,8 +47,8 @@
                         :color="color"
                     ></v-slider>
                 </v-flex>
-                <v-flex px-4 xs12 sm6 class="panel-content--show-4">
-                    <v-icon small>create</v-icon>達成難易度
+                <v-flex px-4 pb-1 xs12 class="panel-content--show-4 white--text">
+                    <v-icon color="#a5a5bd" small left>create</v-icon>達成難易度
                     <v-range-slider
                         v-model="accessibility"
                         min="0"
@@ -63,7 +60,7 @@
                     ></v-range-slider>
                 </v-flex>
                 <v-flex px-4 xs12 sm6 class="panel-content--show-2">
-                    <v-btn class="white--text" block large :color="color" @click="submit">救救我吧！</v-btn>
+                    <v-btn class="white--text" block large color="#fb8c00" @click="submit">救救我吧！</v-btn>
                 </v-flex>
             </v-layout>
         </v-form>
@@ -76,8 +73,8 @@ import { mapMutations } from 'vuex'
 export default {
     data() {
         return {
-            color: "orange darken-3",
-            thumbSize: "20",
+            color: "#f9c370",
+            thumbSize: "18",
             price: [0, 1],
             type: '',
             participants: 1,
@@ -114,5 +111,40 @@ export default {
 </script>
 
 <style>
+.find-act__container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.find-act__form {
+    position: relative;
+    background-color: #5c6579;
+    border-bottom: 12px solid #4f5d7b;
+}
+.find-act__form::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-top: 45px solid #35326b;
+    border-left: 45px solid transparent;
+    z-index: 1;
+}
+.find-act__title {
+    color: #f9c370;
+    font-family: 'Prosto One', cursive;
+    font-size: 35px;
+}
+@media (min-width: 500px) {
+    .find-act__title {
+        font-size: 45px;
+    }
+}
 
+.find-act__icon {
+    width: 100px;
+    margin: 0 auto;
+    filter: grayscale(.35);
+}
 </style>

@@ -8,19 +8,19 @@
             <v-flex class="act-card__property-group" xs3 sm6>
                 <v-layout row wrap>
                     <v-flex class="act-card__property" xs12 sm6>
-                        <v-icon small>bookmarks</v-icon>
+                        <v-icon small color="#484642">bookmarks</v-icon>
                         {{ activity.type | chinese-category-format }}
                     </v-flex>
                     <v-flex class="act-card__property" xs12 sm6>
-                        <v-icon small>monetization_on</v-icon>
+                        <v-icon small color="#484642">monetization_on</v-icon>
                         {{ activity.price }}
                     </v-flex>
                     <v-flex class="act-card__property" xs12 sm6>
-                        <v-icon small>group</v-icon>
+                        <v-icon small color="#484642">group</v-icon>
                         {{ activity.participants }}
                     </v-flex>
                     <v-flex class="act-card__property" xs12 sm6>
-                        <v-icon small>create</v-icon>
+                        <v-icon small color="#484642">create</v-icon>
                         {{ activity.accessibility }}
                     </v-flex>
                 </v-layout>
@@ -73,12 +73,14 @@ export default {
     &__property {
         padding: 2px 5px;
         border-right: 1px solid #F3DABB;
+        color: #484642;
     }
     &__name {
         height: 100%;
         text-align: left;
         word-break: break-all;
         background-color: #FAFFED;
+        color: #484642;
     }
 }
 @media (min-width: 600px) {
