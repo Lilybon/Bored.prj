@@ -136,72 +136,66 @@ export default {
 }
 </script>
 
-<style>
-.not-found__container {
-    position: relative;
-    margin: 0 auto;
-    width: 260px;
-    height: 194px;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 0 0.5em #CC9861;
-}
-@media (min-width: 600px) {
-    .not-found__container {
-        width: 400px;
-        height: 299px;
+<style lang="scss">
+.not-found {
+    &__container {
+        position: relative;
+        margin: 0 auto;
+        width: 260px;
+        height: 194px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 0.5em #CC9861;
+        @media (min-width: 600px) {
+            width: 400px;
+            height: 299px;
+        }
+        @media (min-width: 800px) {
+            width: 600px;
+            height: 448px;
+        }
     }
-}
-@media (min-width: 800px) {
-    .not-found__container {
-        width: 600px;
-        height: 448px;
+    &__image {
+        width: 100%;    
+        opacity: .4;
     }
-}
-.not-found__image {
-    width: 100%;    
-    opacity: .4;
-}
-.not-found__title {
-    position: absolute;
-    left: 15%;
-    bottom: 30%;
-    padding: 0 0 10px 10px;
-    text-transform:uppercase;
-    font-weight: bold;
-    color: #A08B6A;
-    font-size: 30px;
-}
-@media (min-width: 600px) {
-    .not-found__title {
-        left: 5%;
-        font-size: 50px;
-    }
-}
-@media (min-width: 800px) {
-    .not-found__title {
+    &__title {
+        position: absolute;
         left: 15%;
-        font-size: 60px;
+        bottom: 30%;
+        padding: 0 0 10px 10px;
+        text-transform:uppercase;
+        font: {
+            weight: bold;
+            size: 30px;
+        }
+        color: #A08B6A;
+        @media (min-width: 600px) {
+            left: 5%;
+            font-size: 50px;
+        }
+        @media (min-width: 800px) {
+            left: 15%;
+            font-size: 60px;
+        }
     }
-}
-.not-found__content {
-    position: absolute;
-    right: 15%;
-    bottom: 10%;
-    padding-left: 10px;
-    border-left: 8px solid #A08B6A;
-    font-weight: bold;
-    color: #5D543A;
-    font-size: 16px;
-}
-@media (min-width: 600px) {
-    .not-found__content {
-        font-size: 24px;
-    }
-}
-@media (min-width: 800px) {
-    .not-found__content {
-        font-size: 32px;
+    &__content {
+        position: absolute;
+        right: 15%;
+        bottom: 10%;
+        padding-left: 10px;
+        border-left: 8px solid #A08B6A;
+        font: {
+            weight: bold;
+            size: 16px;
+        }
+        color: #5D543A;
+        @media (min-width: 600px) {
+            font-size: 24px;
+        }
+        @media (min-width: 800px) {
+            font-size: 32px;
+        }
     }
 }
 </style>

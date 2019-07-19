@@ -17,7 +17,7 @@ Vue.filter('chinese-category-format', (englishText) => {
   return result.length ? result[0].text : englishText;
 })
 
-export const bus = new Vue();
+export const bus = new Vue()
 
 new Vue({
   router,

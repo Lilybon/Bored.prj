@@ -224,28 +224,33 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$green: #0ab97f;
+$red: #d81503;
+$grey: #ccc;
 .stats-chart__container {
     overflow: hidden;
     background-color: #f5edd6;
     width: 240px;
     height: 208px;
     margin: auto;
-}
-@media (min-width: 520px) {
-    .stats-chart__container {
+    @media (min-width: 520px){
         width: 520px;
         height: 450px;
     }
 }
-.group-bar-chart__bar--like-count {
-    fill: #0ab97f;
-}
-.group-bar-chart__bar--dislike-count {
-    fill: #d81503;
+.group-bar-chart {
+    &__bar {
+        &--like-count {
+            fill: $green;
+        }
+        &--dislike-count {
+            fill: $red;
+        }
+    }
 }
 .tick line {
-  stroke: #ccc;
+  stroke: $grey;
   stroke-dasharray: 10, 5;
 }
 </style>

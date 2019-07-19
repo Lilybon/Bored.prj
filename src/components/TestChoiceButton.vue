@@ -10,6 +10,8 @@
             @dragleave="dragLeave"
             @drop="dragDrop"
             v-on="on"
+            :data-step="step"
+            :data-intro="intro"
         >
             <v-icon class="choice__icon" size="5vmax" color="white">
                 {{ choice ? 'check' : 'close' }}
@@ -25,7 +27,9 @@ import { bus } from '../main'
 
 export default {
     props: {
-        choice: Boolean
+        choice: Boolean,
+        step: Number,
+        intro: String
     },
     data() {
       return {
@@ -66,7 +70,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @keyframes scaleUpShow {
     0% {
         transform: scale(0,0);
@@ -90,32 +94,32 @@ export default {
     cursor: pointer;
     transform: scale(1,1);
     transition: transform .3s ease-out 0s;
-}
-.choice--hover, .choice:hover {
-    transform: scale(1.3,1.3);
-    transition: transform .3s ease-out 0s;
-}
-@media (hover: none) {
-    .choice:hover { 
-        transform: scale(1,1); 
+    &--hover, &:hover {
+        transform: scale(1.3,1.3);
+        transition: transform .3s ease-out 0s;
     }
-}
-.choice__icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -2.5vmax 0 0 -2.5vmax;
-}
-.choice--like {
-    right: 5vw;
-    background-color: #0ab97f;
-}
-.choice--dislike {
-    left: 5vw;
-    background-color: #d81503;
-}
-.choice--appear {
-    animation: .5s ease-out 0s 1 scaleUpShow;
+    &:hover {
+       @media (hover: none) {
+           transform: scale(1,1); 
+       } 
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -2.5vmax 0 0 -2.5vmax;
+    }
+    &--like {
+        right: 5vw;
+        background-color: #0ab97f;
+    }
+    &--dislike {
+        left: 5vw;
+        background-color: #d81503;
+    }
+    &--appear {
+        animation: .5s ease-out 0s 1 scaleUpShow;
+    }
 }
 </style>
 

@@ -110,41 +110,40 @@ export default {
 }
 </script>
 
-<style>
-.find-act__container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-.find-act__form {
-    position: relative;
-    background-color: #5c6579;
-    border-bottom: 12px solid #4f5d7b;
-}
-.find-act__form::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0px;
-    height: 0px;
-    border-top: 45px solid #35326b;
-    border-left: 45px solid transparent;
-    z-index: 1;
-}
-.find-act__title {
-    color: #f9c370;
-    font-family: 'Prosto One', cursive;
-    font-size: 35px;
-}
-@media (min-width: 500px) {
-    .find-act__title {
-        font-size: 45px;
+<style lang="scss">
+.find-act {
+    &__container {
+        max-width: 600px;
+        margin: 0 auto;
     }
-}
-
-.find-act__icon {
-    width: 100px;
-    margin: 0 auto;
-    filter: grayscale(.35);
+    &__form {
+        position: relative;
+        background-color: #5c6579;
+        border-bottom: 12px solid #4f5d7b;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0px;
+            height: 0px;
+            border-top: 45px solid #35326b;
+            border-left: 45px solid transparent;
+            z-index: 1;
+        }
+    }
+    &__title {
+        color: #f9c370;
+        font-family: 'Prosto One', cursive;
+        font-size: 35px;
+        @media (min-width: 500px) {
+            font-size: 45px;
+        }
+    }
+    &__icon {
+        width: 100px;
+        margin: 0 auto;
+        filter: grayscale(.35);
+    }
 }
 </style>

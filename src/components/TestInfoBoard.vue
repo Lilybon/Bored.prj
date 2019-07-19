@@ -33,7 +33,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$red: #D81503;
+$green: #0AB97F;
+$black: #333031;
+$white: white;
 .test-info-board {
     position: relative;
     z-index: 5;
@@ -44,64 +48,54 @@ export default {
     height: 160px;
     padding: 20px;
     border-radius: 20px;
-    background-color: #333031;
-    font-size: 20px;
-    font-weight: bold;
+    background-color: $black;
+    font: {
+        size: 20px;
+        weight: bold;
+    }
     text-align: center;
-    color: white;
-}
-@media (min-width: 600px) {
-   .test-info-board {
+    color: $white;
+    @media (min-width: 600px) {
         margin-left: -100px;
         width: 200px;
         height: 200px;
-   } 
-}
-@media (min-width: 960px) {
-   .test-info-board {
+    }
+    @media (min-width: 960px) {
         top: 60vh;   
         margin-left: -200px;
         width: 400px;
         height: 150px;
-   } 
-}
-.test-info-board__container {
-    height: 100%;
-}
-.test-info-board__progress {
-    font-size: 15px;
-}
-@media (min-width: 960px) {
-   .test-info-board__progress {
-        order: 2;
-   } 
-}
-.test-info-board__choice {
+    }
+    &__container {
+        height: 100%;
+    }
+    &__progress {
         font-size: 15px;
-}
-@media (min-width: 600px) {
-    .test-info-board__choice {
-        font-size: 25px;
+        @media (min-width: 960px) {
+            order: 2;
+        }
     }
-    .test-info-board__choice i {
-        font-size: 25px;
+    &__choice {
+        font-size: 15px;
+        @media (min-width: 600px) {
+            font-size: 25px;
+            i {
+                font-size: 25px;
+            }
+        }
+        &--like {
+            color: $green;
+            @media (min-width: 960px) {
+                order: 3;
+            }
+        }
+        &--dislike {
+            color: $red;
+            @media (min-width: 960px) {
+                order: 1;
+            }
+        }
     }
-}
-.test-info-board__choice--like {
-    color: #0AB97F;
-}
-@media (min-width: 960px) {
-   .test-info-board__choice--like {
-        order: 3;
-   } 
-}
-.test-info-board__choice--dislike {
-    color: #D81503;
-}
-@media (min-width: 960px) {
-   .test-info-board__choice--dislike {
-        order: 1;
-   } 
 }
 </style>
 

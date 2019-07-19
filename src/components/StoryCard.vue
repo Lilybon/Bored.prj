@@ -23,25 +23,27 @@ export default {
 </script>
 
 <style lang="scss">
-.story-card__title {
-  font-weight: 300;
-}
-.story-card__image {
-  margin: 0 auto 20px;
-  filter: grayscale(0.8);
-  transition: filter 0.3s ease-in,
-  transform 0s ease-in;
-  &:hover {
-    filter: grayscale(0);
-    transform: rotate(360deg);
-    transition: transform 0.6s ease-in;
+.story-card {
+  &__title {
+    font-weight: 300;
   }
-}
-.story-card__content {
-  margin: 0 auto;
-  border-top: 2px solid #fb8c00;
-  min-height: 100px;
-  line-height: 2rem;
+  &__image {
+    margin: 0 auto 20px;
+    filter: grayscale(0.8);
+    transition: filter 0.3s ease-in,
+    transform 0s ease-in;
+    &:hover {
+      filter: grayscale(0);
+      transform: rotate(360deg);
+      transition: transform 0.6s ease-in;
+    }
+  }
+  &__content {
+    margin: 0 auto;
+    border-top: 2px solid #fb8c00;
+    min-height: 100px;
+    line-height: 2rem;
+  }
 }
 </style>
 

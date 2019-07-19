@@ -123,13 +123,10 @@ export default {
 }
 </script>
 
-<style>
-.test-card p {
-    margin: 0;
-}
+<style lang="scss">
 .test-card {
     position: absolute;
-    z-index: 10;
+    z-index: 10000000;
     top: 5vh;
     left: 50%;
     margin-left: -105px;
@@ -139,6 +136,69 @@ export default {
     cursor: pointer;
     text-align: center;
     transition: transform .3s ease-out 0s;
+    p {
+        margin: 0;
+    }
+    &--invisible {
+        visibility: hidden;
+    }
+    &--spin {
+        transform: scale(0.8) rotateX(-40deg) rotateY(70deg);
+    }
+    &-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #FFD463;
+        top: 0;
+        border-radius: 2vw;
+        box-shadow: inset 0px 0px 0px 12px #FCF8F4;
+    }
+    &-center {
+        position: absolute;
+        top: 25%;
+        left: 0%;
+        width: 100%;
+        text-align: center; 
+        background: #FCF8F4;
+        &__mark {
+            color: #9e1540;
+            font-size: 40px;
+        }
+        &__title {
+            padding: 5px 24px;
+            text-align: left;
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+    }
+    &-corner {
+        position: absolute;
+        margin: 0;
+        padding: 2% 2.5%;
+        background: #FCF8F4;
+        font-size:0.5rem;
+        &__rt {
+            top: 3%;
+            right: 5%;
+        }
+        &__lt {
+            top: 3%;
+            left: 5%;
+        }
+        &__rb {
+            bottom: 3%;
+            right: 5%;
+        }
+        &__lb {
+            bottom: 3%;
+            left: 5%;
+        }
+        &__title {
+            color: #9e1540;
+            font-weight: bold;
+        }
+    }
 }
 @media (min-width: 600px) {
     .test-card {
@@ -154,21 +214,6 @@ export default {
         height: 400px;
     }
 }
-.test-card--invisible {
-    visibility: hidden;
-}
-.test-card--spin {
-    transform: scale(0.8) rotateX(-40deg) rotateY(70deg);
-}
-.test-card-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #FFD463;
-    top: 0;
-    border-radius: 2vw;
-    box-shadow: inset 0px 0px 0px 12px #FCF8F4;
-}
 @media (min-width: 600px) {
     .test-card-background {
         box-shadow: inset 0px 0px 0px 15px #FCF8F4;
@@ -178,24 +223,6 @@ export default {
     .test-card-background {
         box-shadow: inset 0px 0px 0px 20px #FCF8F4;
     }
-}
-.test-card-center {
-    position: absolute;
-    top: 25%;
-    left: 0%;
-    width: 100%;
-    text-align: center; 
-    background: #FCF8F4;  
-}
-.test-card-center__mark {
-    color: #9e1540;
-    font-size: 40px;
-}
-.test-card-center__title {
-    padding: 5px 24px;
-    text-align: left;
-    font-size: 0.8rem;
-    font-weight: 300;
 }
 @media (min-width: 600px) {
     .test-card-center__title {
@@ -207,13 +234,6 @@ export default {
         font-size: 1.6rem;
     }
 }
-.test-card-corner {
-    position: absolute;
-    margin: 0;
-    padding: 2% 2.5%;
-    background: #FCF8F4;
-    font-size:0.5rem;
-}
 @media (min-width: 600px) {
     .test-card-corner {
         font-size:0.75rem;
@@ -223,26 +243,6 @@ export default {
     .test-card-corner {
         font-size: 1rem;
     }
-}
-.test-card-corner__rt {
-    top: 3%;
-    right: 5%;
-}
-.test-card-corner__lt {
-    top: 3%;
-    left: 5%;
-}
-.test-card-corner__rb {
-    bottom: 3%;
-    right: 5%;
-}
-.test-card-corner__lb {
-    bottom: 3%;
-    left: 5%;
-}
-.test-card-corner__title {
-    color: #9e1540;
-    font-weight: bold;
 }
 </style>
 

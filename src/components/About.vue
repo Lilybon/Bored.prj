@@ -80,18 +80,23 @@ export default {
 </script>
 
 <style lang="scss">
+$white: white;
+$yellow: #f9c370;
+$pink: #d29ebf;
 .about {
     background-color: #41364a;
     &__info {
-      color: white;
+      color: $white;
     }
     &__title {
       margin-bottom: 10px;
       &--main {
-        font-size: 40px;
+        font: {
+          family: 'Prosto One', cursive;
+          size: 40px;
+        }
         text-align: center;
-        font-family: 'Prosto One', cursive;
-        color: #f9c370;
+        color: $yellow;
       }
     }
     &__paragraph {
@@ -101,15 +106,15 @@ export default {
     &__content {
       padding-left: 15px;
       a {
-        color: #f9c370;
+        color: $yellow;
         padding-right: 10px;
         text-decoration: none;
       }
     }
-}
-.about .theme--dark.v-input:not(.v-input--is-disabled) input, 
-.about .theme--dark.v-input:not(.v-input--is-disabled) textarea {
-    color: #d29ebf !important;
+    .theme--dark.v-input:not(.v-input--is-disabled) input, 
+    .theme--dark.v-input:not(.v-input--is-disabled) textarea {
+    color: $pink !important;
+    }
 }
 </style>
 

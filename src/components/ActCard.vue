@@ -74,6 +74,9 @@ export default {
         padding: 2px 5px;
         border-right: 1px solid #F3DABB;
         color: #484642;
+        @media (min-width: 600px) {
+            padding: 5px 35px;
+        }
     }
     &__name {
         height: 100%;
@@ -81,30 +84,19 @@ export default {
         word-break: break-all;
         background-color: #FAFFED;
         color: #484642;
+        @media (min-width: 600px) {
+            text-align: center;
+        }
     }
-}
-@media (min-width: 600px) {
-    .act-card {
+    @media (min-width: 600px) {
         height: 60px;
         padding-left: 30px;
         font-size: 12px;
     }
-}
-@media (min-width: 800px) {
-    .act-card {
+    @media (min-width: 800px) {
         height: 70px;
         padding-left: 50px;
         font-size: 16px;
-    }
-}
-@media (min-width: 600px) {
-    .act-card__property {
-        padding: 5px 35px;
-    }
-}
-@media (min-width: 600px) {
-    .act-card__name {
-        text-align: center;
     }
 }
 </style>
