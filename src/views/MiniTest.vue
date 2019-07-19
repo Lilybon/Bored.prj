@@ -67,7 +67,15 @@ export default {
     mounted() {
         if(this.isFirstTime) {
             introJs(".playground")
-                .setOption("overlayOpacity", 0.35)
+                .setOptions({
+                    "overlayOpacity": 0.35,
+                    "skipLabel": "跳過",
+                    "nextLabel": "下一步",
+                    "prevLabel": "上一步",
+                    "doneLabel": "我明白了",
+                    "hidePrev": true,
+                    "hideNext": true
+                })
                 .start()
             this.notFirstTimeDoMiniTest()
         }
