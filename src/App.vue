@@ -1,24 +1,24 @@
 <template>
   <v-app dark>
     <router-view></router-view>
-    <Footer/>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Footer
   },
-  data () {
+  data() {
     return {
       //
-    }
+    };
   }
-}
+};
 </script>
 
 <style>
@@ -74,25 +74,25 @@ export default {
   position: static;
 }
 .panel-content--show-1 {
-  animation: .5s ease-out 0s 1 showContent; 
+  animation: 0.5s ease-out 0s 1 showContent;
 }
 .panel-content--show-2 {
-  animation: 1s ease-out 0s 1 showContent; 
+  animation: 1s ease-out 0s 1 showContent;
 }
 .panel-content--show-3 {
-  animation: 1.5s ease-out .0s 1 showContent; 
+  animation: 1.5s ease-out 0s 1 showContent;
 }
 .panel-content--show-4 {
-  animation: 2s ease-out 0s 1 showContent; 
+  animation: 2s ease-out 0s 1 showContent;
 }
 .panel-content--slide-from-right {
-  animation: .4s ease-out 0s 1 slidefomRightAndShow;
+  animation: 0.4s ease-out 0s 1 slidefomRightAndShow;
 }
 .panel-content__description {
-    position: relative;
-    padding-left: 10px;
-    margin: 10px 0;
-    border-left: 3px solid #bdb6a5;
-    line-height: 2rem;
+  position: relative;
+  padding-left: 10px;
+  margin: 10px 0;
+  border-left: 3px solid #bdb6a5;
+  line-height: 2rem;
 }
 </style>
